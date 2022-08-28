@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador Alura-ORACLE</title>
+        <link rel="shortcut icon" href="./images/Logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- (user-scalable=no,  maximum-scale=1.0, minimum-scale=1.0") -->
+        
+    </head>
+        <body class="light-theme">
+            <header>
+                <img class="logo" src="./images/Logo.png" alt="">
+                <img class="logo-w" src="./images/Logo-w.png" alt="">
+            </header>
+            <main>
+                <section>
+                    <button id="tema" class="bton" >Dark</button>
+                </section>
+            <section>
+                <textarea type="text" id="enter" class="entrada"  cols="40" rows="6" placeholder="Ingrese el texto aqui"></textarea>
+                <p>Solo letras minúsculas y sin acentos</p>
+                <div id="botones">
+                    <button type="button" id="bt1" class="boton" onclick="buttonEncriptar()">Encriptador</button>
+                    <button type="button"  id="bt2" class="boton" onclick="buttonDesencriptar()">Desencriptador</button>
+                    <button type="button"  id="bt3" class="boton" onclick="limpiarPeticion()()">Limpiar</button>
+                    <button type="button" id="bt4" class="boton" onclick="buttonCopiar()">Copiar Texto</button>
+                    
+                </div>
+            </section>
+            <section id="derecha">
+                <img id="imagen-pcl" src="./images/image.png" alt="imagen_persona_con_lupa">
+                <textarea type="text" id="out" class="salida"  cols="18" rows="8" placeholder="Ingresa el texto que desees encriptar o desencriptar." ></textarea>
+               
+            </section>
+            </main>
+          
+        </body>
+        <script src="./js/script.js"></script>
+</html>

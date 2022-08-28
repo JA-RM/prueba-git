@@ -1,0 +1,315 @@
+:root {
+    --default: #E5E5E5;
+    --white: #ffffff;
+    --blue: #0A3871;
+    --black: #000000;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--fontColor);
+}
+main{
+    display: flex;
+}
+
+.light-theme {
+    
+    --bg: var(--default);
+    --fontColor: var(--blue);
+    --btnBg: var(--blue);
+    --btnFontColor: var(--white);
+}
+.dark-theme {
+    
+    --bg: var(--blue);
+    --fontColor: var(--default);
+    --btnBg: var(--default);
+    --btnFontColor: var(--blue);
+}
+.bton {
+    position: absolute;
+    top: 20px;
+    left: 25;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    transition: background-color 1s ease-out;
+}
+.bton:focus { outline-style: none; }
+.boton {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: static;
+    width: 328px;
+    height: 67px;
+    left: 0px;
+    top: 0px;
+    color: var(--btnFontColor);
+    font-weight: bold;
+    background-color: var(--btnBg);
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+
+#derecha{
+    position: absolute;
+    width: 400px;
+    height: 644px;
+    left: 950px;
+    right: 10%;
+    top: 40px;
+    color: var(--fontColor);
+    background-image: url("../images/1.png");
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+}
+.boton:hover,
+.boton:focus{
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    position: static;
+    width: 328px;
+    height: 67px;
+    left: 352px;
+    top: 0px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 24px;
+    color: #0A3871;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    font-weight: bold;
+}
+#botones {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+
+#bt1{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+#bt2 {
+    grid-column: 2 / 2;
+    grid-row: 1;
+    }
+#bt3 {
+    grid-column: 1 /2;
+    grid-row: 2;
+}
+#bt4 {
+    grid-column: 2 / 2;
+    grid-row: 2;
+}
+
+.logo{
+    position: absolute;
+    left: 5%;
+    right: 30%;
+    top: 4%;
+    bottom: 0%;
+}
+#tema{
+    position: absolute;
+    left: 15%;
+    right: 30%;
+    top: 4%;
+    bottom: 0%;
+}
+.logo-w{
+    position: absolute;
+    left: 20%;
+    right: 30%;
+    top: 4%;
+    bottom: 0%;
+}
+#enter{
+    text-align: center;
+    align-content: center;
+    width: 925px;
+    height: 346px;
+    border: 2px;
+    color: var(--fontColor);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 90px;
+    padding: inherit;
+}
+#out{
+    text-align: center;
+    align-content: center;
+    width: auto;
+    height: auto;
+    border: 2px;
+    color: var(--blue);
+    background: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 90px;
+}
+#imagen-pcl{
+    width: 400px;
+    height: 348px;
+    border-radius: 24%;
+}
+p{
+    text-align: center;
+    align-items: center;
+    font-size: small;
+}
+
+/*Tablets de 750px y de alto 578*/
+
+@media screen and (max-width:750px){
+
+
+main{
+    flex: none;
+}
+#derecha{
+    all:unset;
+}
+#derecha #out {
+    
+    text-align: center;
+    align-content: center;
+    width: 750px;
+    height: 125px;
+    color: var(--blue);
+    background: var(--white);
+    top: 90%;
+    right: 10.5%;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    padding: 0%;
+    margin: 0% -11% 0% 0%;
+}
+    #imagen-pcl{
+        visibility: hidden;
+        width: 0%;
+        height: 0%;
+        left: 100%;
+        margin: 0%;
+        padding: 0%;
+}
+
+#enter {
+    text-align: center;
+    align-content: center;
+    width: 750px;
+    height: 246px;
+    border: 2px;
+    color: var(--fontColor);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0% 0% 0% 1%;
+}
+.logo-w{
+    left: 54%;
+}
+.logo{
+    left:32%;
+}
+#tema{
+    left: 48%;
+}
+}
+
+/*Moviles de menos de 375px y de alto 667 Iphone S E*/
+
+@media screen and (max-width:375px){
+
+
+    * #derecha main #botones #enter #out #tema{
+        all:unset;
+    }
+    
+    #botones {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr;
+        grid-gap: 10px;
+    }
+    
+    #bt1{
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+    #bt2 {
+        grid-column: 1 / 4;
+        grid-row: 2;
+        }
+    #bt3 {
+        grid-column: 1 /4;
+        grid-row: 3;
+    }
+    #bt4 {
+        grid-column: 1 / 4;
+        grid-row: 4;
+    }
+    
+    #derecha #out {
+        
+        text-align: center;
+        align-content: center;
+        width: 375px;
+        height: 250px;
+        color: var(--blue);
+        background: var(--white);
+        top: 100%;
+        right: 0%;
+        font-size: 40px;
+        font-weight: bold;
+        position: absolute;
+        padding: 0%;
+        margin: 0%;
+    }    
+    #enter {
+        text-align: center;
+        align-content: center;
+        width: 375px;
+        height: 250px;
+        border: 2px;
+        color: var(--fontColor);
+        font-size: 40px;
+        font-weight: bold;
+        padding: 0% 0% 0% 0%;
+    }
+    #tema{
+        left: 41%;
+    }
+    .logo{
+        left:0%;
+    }
+    .logo-w{
+        left: 65%;
+    }
+
+}
